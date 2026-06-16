@@ -89,7 +89,8 @@ body {
 /* ════════════════════════════════════════
    ── Header ──
    ════════════════════════════════════════ */
-.header-wiki {
+   @media (max-width: 768px) {
+    .header-wiki {
     background: linear-gradient(to bottom, rgba(139,0,0,0.6), rgba(0,0,0,0.8));
     border: 1px solid var(--dorado);
     border-radius: 12px;
@@ -143,8 +144,10 @@ body {
 /* ════════════════════════════════════════
    ── Imagen ──
    ════════════════════════════════════════ */
-.img-lucifer {
+
+   .img-lucifer {
     max-width: 500px;
+    width: 100%;
     border: 3px solid var(--dorado);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(192, 57, 43, 0.6);
@@ -154,6 +157,9 @@ body {
 .img-lucifer:hover {
     transform: scale(1.04);
 }
+
+}
+
 
 /* ════════════════════════════════════════
    ── Footer ──
@@ -166,6 +172,9 @@ body {
     margin-top: 40px;
 }
 
+/* ════════════════════════════════════════
+   ── Boton o Menú Desplegable ──
+   ════════════════════════════════════════ */
 /* Contenedor del dropdown */
 .dropdown-lucifer {
     background-color: rgba(0, 0, 0, 0.95);
@@ -173,9 +182,7 @@ body {
     border-radius: 8px;
 }
 
-/* ════════════════════════════════════════
-   ── Boton o Menú Desplegable ──
-   ════════════════════════════════════════ */
+
 /* El menú desplegable — oculto por defecto */
 .dropdown-lucifer .dropdown-item {
    color: var(--blanco);
