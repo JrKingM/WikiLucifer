@@ -101,7 +101,7 @@ body {
 
 .header-wiki hr {
     border: none;
-    border-top: 1px solid var(--dorado);
+    border-top: 1px solid var(--dorado) !important;
     opacity: 0.4;
     margin: 12px 0;
 }
@@ -148,10 +148,11 @@ body {
    .img-lucifer {
     max-width: 500px;
     width: 100%;
-    border: 3px solid var(--dorado);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(192, 57, 43, 0.6);
-    transition: transform 0.3s ease;
+    height: auto;
+    border: 3px solid var(--dorado) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 20px rgba(192, 57, 43, 0.6) !important;
+    transition: transform 0.3s ease !important;
 }
 
 .img-lucifer:hover {
