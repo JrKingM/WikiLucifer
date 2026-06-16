@@ -1,0 +1,468 @@
+/* ── Variables de tema Lucifer ── */
+:root {
+    --rojo-lucifer:    #c0392b;
+    --rojo-oscuro:     #7b0000;
+    --dorado:          #c9a84c;
+    --dorado-claro:    #f0d080;
+    --negro:           #0d0d0d;
+    --gris-oscuro:     #1a1a1a;
+    --blanco:          #f5f5f5;
+    --blanco-dorado:   #e5d19f;
+}
+
+/* ════════════════════════════════════════
+   ── Cuerpo O Base ──
+   ════════════════════════════════════════ */
+body {
+    background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 60%, #2a0000 100%);
+    color: var(--blanco);
+    min-height: 100vh;
+    font-family: Georgia, serif;
+}
+
+/* ════════════════════════════════════════
+   ── Navbar ──
+   ════════════════════════════════════════ */
+.navbar-lucifer {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-bottom: 2px solid var(--dorado);
+}
+
+.navbar-brand {
+    color: var(--dorado) !important;
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--blanco) !important;
+    font-weight: 500;
+    padding: 8px 14px;
+    transition: color 0.3s ease;
+    font-family: 'Cinzel',serif;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--dorado-claro) !important;
+}
+
+/* Página activa: dorado + negrita */
+.nav-link.active {
+    color: var(--dorado) !important;
+    font-weight: bold;
+    border-bottom: 2px solid var(--dorado);
+    text-shadow: 0 0 8px rgba(201, 168, 76, 0.5);
+}
+
+/* Separador visual entre logo y links del navbar */
+.navbar-separador {
+    width: 1px;
+    height: 24px;
+    background: rgba(201, 168, 76, 0.4);
+    margin: 0 12px;
+}
+
+/* ════════════════════════════════════════
+   Logo de la wiki
+   ════════════════════════════════════════ */
+.logo-lucifer {
+    color: var(--dorado);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+}
+
+.logo-lucifer:hover {
+    color: var(--dorado-claro);
+}
+
+@media (max-width: 768px) {
+    .logo-lucifer {
+        font-size: 1.4rem;
+    }
+}
+
+/* ════════════════════════════════════════
+   ── Header ──
+   ════════════════════════════════════════ */
+.header-wiki {
+    background: linear-gradient(to bottom, rgba(139,0,0,0.6), rgba(0,0,0,0.8));
+    border: 1px solid var(--dorado);
+    border-radius: 12px;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1800px;
+}
+
+.header-wiki hr {
+    border: none;
+    border-top: 1px solid var(--dorado);
+    opacity: 0.4;
+    margin: 12px 0;
+}
+
+.header-wiki h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    color: var(--dorado-claro);
+    text-shadow: 0 0 18px rgba(200, 50, 50, 0.8);
+    font-weight: bold;
+}
+.header-wiki h2 {
+    font-family: 'cinzel', serif;
+    font-size: 2.0rem;
+    letter-spacing: 2px;
+    color: var(--blanco);
+    text-shadow: 0 0 18px rgba(200, 50, 50, 0.8);
+    font-weight: bold;
+    
+}
+.header-wiki h3 {
+    font-family: 'cinzel', serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: var(--blanco-dorado);
+    text-shadow: 0 0 18px rgba(200, 50, 50, 0.8);
+    font-weight: bold;
+    
+}
+
+.header-wiki p {
+    font-family: 'Crimson text', Georgia, serif;
+    color: var(--blanco-dorado);
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+
+/* ════════════════════════════════════════
+   ── Imagen ──
+   ════════════════════════════════════════ */
+.img-lucifer {
+    max-width: 500px;
+    border: 3px solid var(--dorado);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(192, 57, 43, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.img-lucifer:hover {
+    transform: scale(1.04);
+}
+
+/* ════════════════════════════════════════
+   ── Footer ──
+   ════════════════════════════════════════ */
+.pie {
+    padding: 20px;
+    color: #aaa;
+    font-size: 1.10rem;
+    border-top: 1px solid var(--blanco);
+    margin-top: 40px;
+}
+
+/* Contenedor del dropdown */
+.dropdown-lucifer {
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid var(--dorado);
+    border-radius: 8px;
+}
+
+/* ════════════════════════════════════════
+   ── Boton o Menú Desplegable ──
+   ════════════════════════════════════════ */
+/* El menú desplegable — oculto por defecto */
+.dropdown-lucifer .dropdown-item {
+   color: var(--blanco);
+    font-family: Georgia, serif;
+}
+
+/* Se muestra al pasar el mouse */
+.dropdown-lucifer .dropdown-item:hover {
+   background-color: rgba(139, 0, 0, 0.4);
+    color: var(--dorado);
+}
+
+/* ════════════════════════════════════════
+   Tabla
+   ════════════════════════════════════════ */
+/* Contenedor externo con borde dorado y sombra */
+.tabla-wrap {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid var(--dorado);
+    max-width: 720px;
+    margin: 20px auto;
+    box-shadow: 0 0 30px rgba(192, 57, 43, 0.25);
+}
+ 
+/* Encabezado superior de la tabla (caption personalizado) */
+.tabla-caption {
+    background: linear-gradient(to right, rgba(139,0,0,0.9), rgba(80,0,0,0.9));
+    padding: 18px 24px;
+    border-bottom: 2px solid var(--dorado);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+ 
+.tabla-caption h2 {
+    color: var(--dorado-claro);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgba(200, 50, 50, 0.9);
+    letter-spacing: 1px;
+    margin: 0;
+}
+ 
+/* La tabla ocupa todo el ancho del contenedor */
+.tabla-lucifer {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+/* Fila de encabezados */
+.tabla-lucifer thead tr {
+    background: rgba(100, 0, 0, 0.6);
+}
+ 
+.tabla-lucifer thead th {
+    padding: 13px 20px;
+    color: var(--dorado);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.4);
+    font-weight: normal;
+    text-align: left;
+}
+ 
+/* Filas de datos */
+.tabla-lucifer tbody tr {
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+    transition: background 0.25s ease;
+}
+ 
+/* Filas alternas con tinte rojo suave */
+.tabla-lucifer tbody tr:nth-child(even) {
+    background: rgba(139, 0, 0, 0.1);
+}
+ 
+/* Hover sobre cada fila */
+.tabla-lucifer tbody tr:hover {
+    background: rgba(139, 0, 0, 0.3);
+}
+ 
+.tabla-lucifer tbody td {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    vertical-align: middle;
+    color: var(--blanco);
+}
+ 
+/* Nombre del personaje en la primera columna */
+.tabla-lucifer tbody td:first-child {
+    font-weight: bold;
+}
+ 
+/* Links a páginas de personajes */
+.link-personaje {
+    color: var(--dorado-claro);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+ 
+.link-personaje:hover {
+    color: var(--blanco);
+    text-decoration: underline;
+}
+
+/* Badges de parentesco — etiquetas de colores con tooltip */
+.badge-parentesco {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin: 2px 3px 2px 0;
+    border: 1px solid;
+    cursor: default;
+    transition: opacity 0.2s ease;
+}
+ 
+.badge-parentesco:hover {
+    opacity: 0.8;
+}
+ 
+/* Rojo — relación romántica */
+.bp-pareja {
+    border-color: rgba(192, 57, 43, 0.5);
+    color: #ff8080;
+    background: rgba(192, 57, 43, 0.15);
+}
+ 
+/* Dorado — relación familiar directa */
+.bp-familia {
+    border-color: rgba(201, 168, 76, 0.5);
+    color: var(--dorado-claro);
+    background: rgba(201, 168, 76, 0.1);
+}
+ 
+/* Azul — hermanos / colaterales */
+.bp-hermano {
+    border-color: rgba(100, 100, 255, 0.4);
+    color: #aaaaff;
+    background: rgba(100, 100, 255, 0.1);
+}
+
+/* ════════════════════════════════════════
+   FORMULARIO DE REGISTRO
+   ════════════════════════════════════════ */
+ 
+/* Contenedor del formulario */
+.form-lucifer {
+    max-width: 500px;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--dorado);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(192, 57, 43, 0.25);
+}
+ 
+/* Encabezado del formulario */
+.form-header {
+    background: linear-gradient(to right, rgba(139,0,0,0.9), rgba(80,0,0,0.9));
+    padding: 24px;
+    text-align: center;
+    border-bottom: 2px solid var(--dorado);
+}
+ 
+.form-header h2 {
+    color: var(--dorado-claro);
+    font-size: 1.3rem;
+    text-shadow: 0 0 12px rgba(200, 50, 50, 0.9);
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin: 0;
+}
+ 
+.form-header p {
+    color: rgba(245, 245, 245, 0.5);
+    font-size: 12px;
+    margin-top: 6px;
+}
+ 
+/* Cuerpo del formulario */
+.form-body {
+    padding: 28px 28px 20px;
+}
+ 
+/* Grupo de campo: label + input */
+.form-grupo {
+    margin-bottom: 18px;
+}
+ 
+.form-grupo label {
+    display: block;
+    color: var(--dorado);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+ 
+.form-grupo input {
+    width: 100%;
+    padding: 11px 14px;
+    background: rgba(20, 0, 0, 0.5);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 6px;
+    color: var(--blanco);
+    font-family: Georgia, serif;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+/* Efecto al hacer clic en un input */
+.form-grupo input:focus {
+    outline: none;
+    border-color: var(--dorado);
+    background: rgba(139, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(201, 168, 76, 0.2);
+}
+ 
+.form-grupo input::placeholder {
+    color: rgba(245, 245, 245, 0.25);
+}
+ 
+/* Dos campos lado a lado (fecha y edad) */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+ 
+/* Línea separadora antes de los botones */
+.form-divider {
+    border: none;
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+    margin: 22px 0;
+}
+ 
+/* Contenedor de botones */
+.form-botones {
+    display: flex;
+    gap: 12px;
+}
+ 
+/* Estilo base compartido por ambos botones */
+.btn-lucifer {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+ 
+/* Botón principal — Guardar */
+.btn-guardar {
+    background: linear-gradient(to right, var(--rojo-oscuro), var(--rojo-lucifer));
+    color: var(--dorado-claro);
+    border: 1px solid var(--dorado);
+}
+ 
+.btn-guardar:hover {
+    background: linear-gradient(to right, var(--rojo-lucifer), var(--rojo-oscuro));
+    box-shadow: 0 0 14px rgba(192, 57, 43, 0.5);
+}
+ 
+/* Botón secundario — Limpiar */
+.btn-limpiar {
+    background: transparent;
+    color: var(--dorado);
+    border: 1px solid rgba(201, 168, 76, 0.4);
+}
+ 
+.btn-limpiar:hover {
+    background: rgba(201, 168, 76, 0.1);
+    border-color: var(--dorado);
+}
+ 
+/* Pie del formulario */
+.form-footer {
+    text-align: center;
+    padding: 12px;
+    border-top: 1px solid rgba(201, 168, 76, 0.15);
+    color: rgba(245, 245, 245, 0.3);
+    font-size: 20px;
+}
+
