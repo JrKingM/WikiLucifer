@@ -460,9 +460,9 @@ body {
 /* Pie del formulario */
 .form-footer {
     text-align: center;
-    padding: 12px;
-    border-top: 1px solid rgba(201, 168, 76, 0.15);
+    padding: 10px;
+    border-top: 3px solid rgba(201, 168, 76, 0.15);
     color: rgba(245, 245, 245, 0.3);
-    font-size: 20px;
+    font-size: 22px;
 }
 
