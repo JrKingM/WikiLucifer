@@ -8,67 +8,166 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="fonts/css2.css">
-    <link rel="stylesheet" href="/fonts/cripson text.css">
+    <link rel="stylesheet" href="/fonts/cripson_text.css">
     <script src="js/bootstrap.bundle.min.js"></script>
-
+    <script> const total = document.querySelectorAll('.tarjeta-personaje').length;
+        document.getElementById('stat-personajes').textContent = total; // Cuenta las tarjetas de personajes y actualiza el stat automáticamente
+    </script>
 </head>
 
 <body>
 
     <!--Menu de navegacion -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-lucifer">
-        <div class="dropdown">
-
-            <div class="container-fluid">
-                <a class="logo-lucifer" href="/index.html">Wiki Lucifer</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Personajes</a>
-                            <ul class="dropdown-menu dropdown-lucifer">
-                                <li><a class="dropdown-item" href="/page/lucifer.html">Lucifer Morningstar</a></li>
-                                <li><a class="dropdown-item" href="/page/chloe.html">Chloe Decker</a></li>
-                                <li><a class="dropdown-item" href="/page/aurora.html">Aurora Morningstar</a></li>
-                                <li><a class="dropdown-item" href="/page/amenadiel.html">Amenadiel</a></li>
-                                <li><a class="dropdown-item" href="/page/michael.html">Michael</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/page/familiadelucifer.html">Familia de Lucifer</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <nav class="navbar navbar-lucifer">
+        <div class="container-fluid">
+            <a class="logo-lucifer" href="/index.html">Wiki Lucifer</a>
+            <a class="nav-link" href="/page/familiadelucifer.html">Familia de Lucifer</a>
         </div>
     </nav>
-    <header class="header-wiki text-center">
-        <div class="container">
-            <h1 class="display-4">Bienvenido a la Wiki de Lucifer</h1>
-            <p>
-                El centro de informacion definitivo sobre los personajes de la serie <strong>Lucifer.</strong><br>
-                Este proyecto ha sido construido de forma estatica utilizando la estructura basica de HTML
-            </p>
-            <img src="/img/Portada lucifer.jpg" alt="Lucifer" class="img-lucifer mt-3">
 
-            <p>
-                En esta wiki, encontrarás fichas detalladas de los personajes principales, así como información
-                adicional sobre sus historias, relaciones y características únicas.
-                Navega por las secciones para descubrir más sobre el mundo de Lucifer y sus habitantes.
-            </p>
+    <!-- HERO: portada cinematográfica -->
+    <section class="hero-index">
+        <div class="hero-overlay"></div>
+        <img src="/img/Portada Lu.webp" alt="Lucifer" class="hero-img">
+        <div class="hero-content text-center">
+            <h1 class="hero-titulo">Wiki Lucifer</h1>
+            <p class="hero-subtitulo">El centro de información definitivo sobre los personajes de la serie</p>
+            <a href="#personajes" class="btn-hero">Explorar Personajes</a>
         </div>
+    </section>
 
-    </header>
+
+    <div class="contenedor-principal">
+        <!-- ACERCA DE LA SERIE -->
+        <section class="header-wiki text-center">
+            <h2>Acerca de la Serie</h2>
+            <hr>
+            <p>
+                <strong>Lucifer</strong> es una serie de televisión estadounidense basada en el personaje de DC
+                Comics
+                creado por Neil Gaiman. La historia sigue a <strong>Lucifer Morningstar</strong>, el Diablo en
+                persona,
+                quien aburrido de gobernar el Infierno decide tomarse unas vacaciones en Los Ángeles. Allí abre el
+                club
+                nocturno <em>Lux</em> y, tras verse involucrado en un asesinato, se convierte en consultor del LAPD
+                junto a la detective <strong>Chloe Decker</strong>. La serie mezcla el drama sobrenatural con la
+                comedia y el thriller policial, explorando temas como el libre albedrío, la redención y la
+                identidad.
+                Originalmente emitida por Fox (2016–2018), fue rescatada por Netflix para sus tres temporadas
+                finales,
+                concluyendo en 2021 con 6 temporadas y 93 episodios.
+            </p>
+        </section>
+
+        <!-- CONTADOR DE ESTADÍSTICAS -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-numero">6</span>
+                    <span class="stat-label">Temporadas</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-numero">93</span>
+                    <span class="stat-label">Episodios</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-numero">5</span>
+                    <span class="stat-label">Personajes</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-numero">2016</span>
+                    <span class="stat-label">Año de estreno</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERÍA DE PERSONAJES -->
+        <section id="personajes">
+            <h2 class="text-center mb-4"
+                style="font-family:'Cinzel', serif; color: var(--dorado-claro); letter-spacing: 2px;">Personajes</h2>
+            <div class="galeria-personajes">
+
+                <a href="/page/lucifer.html" class="tarjeta-personaje">
+                    <img src="/img/Lucifer Morningstar.webp" alt="Lucifer Morningstar">
+                    <div class="overlay-nombre"><span>Lucifer Morningstar</span></div>
+                </a>
+
+                <a href="/page/chloe.html" class="tarjeta-personaje">
+                    <img src="/img/Chloe Decker.webp" alt="Chloe Decker">
+                    <div class="overlay-nombre"><span>Chloe Decker</span></div>
+                </a>
+
+                <a href="/page/aurora.html" class="tarjeta-personaje">
+                    <img src="/img/Rory Morningstar.webp" alt="Aurora Morningstar">
+                    <div class="overlay-nombre"><span>Aurora Morningstar</span></div>
+                </a>
+
+                <a href="/page/amenadiel.html" class="tarjeta-personaje">
+                    <img src="/img/Amenadiel.webp" alt="Amenadiel">
+                    <div class="overlay-nombre"><span>Amenadiel</span></div>
+                </a>
+
+                <a href="/page/michael.html" class="tarjeta-personaje">
+                    <img src="/img/Michael.webp" alt="Michael">
+                    <div class="overlay-nombre"><span>Michael</span></div>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- FRASES CÉLEBRES -->
+        <section class="header-wiki">
+            <h2 class="text-center">Frases Célebres</h2>
+            <hr>
+            <div class="frases-grid">
+
+                <div class="frase-card">
+                    <p class="frase-texto">"No soy el Diablo porque soy malvado. Soy el Diablo porque castigo a los
+                        malvados."</p>
+                    <span class="frase-autor">— Lucifer Morningstar</span>
+                </div>
+
+                <div class="frase-card">
+                    <p class="frase-texto">"¿Qué es lo que realmente deseas?"</p>
+                    <span class="frase-autor">— Lucifer Morningstar</span>
+                </div>
+
+                <div class="frase-card">
+                    <p class="frase-texto">"El Infierno es un estado mental, no un lugar."</p>
+                    <span class="frase-autor">— Lucifer Morningstar</span>
+                </div>
+
+                <div class="frase-card">
+                    <p class="frase-texto">"La culpa es la peor forma de auto tortura."</p>
+                    <span class="frase-autor">— Linda Martin</span>
+                </div>
+
+                <div class="frase-card">
+                    <p class="frase-texto">"Dios no te pone obstáculos. Tú mismo los creas."</p>
+                    <span class="frase-autor">— Amenadiel</span>
+                </div>
+
+                <div class="frase-card">
+                    <p class="frase-texto">"Eres el único diablo que he conocido, Lucifer. Y resulta que no eres tan
+                        malo."</p>
+                    <span class="frase-autor">— Chloe Decker</span>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
 
     <footer class="pie">
         <div align="center">
-            <p>Sitio Desarrollado por <strong>Josue Reyes</strong> - © 2026 Wiki Lucifer. Todos los derechos reservados.
+            <p>Sitio Desarrollado por <strong>Josue Reyes</strong> - © 2026 Wiki Lucifer. Todos los derechos
+                reservados.
             </p>
         </div>
     </footer>
+
+
 </body>
 
 </html>
